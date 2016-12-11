@@ -1,0 +1,60 @@
+page-transaction {
+
+  ion-list.list {
+
+    ion-list-header {
+      border-top: 0;
+    }
+
+    ion-item.item-block {
+      padding-left: 25px;
+
+      div.item-inner {
+        border-bottom: none;
+      }
+
+      ion-label {
+        margin: 0 0;
+        padding-top: 5px;
+        padding-bottom: 7px;
+        border-left: 2px solid #EEE;
+        padding-left: 20px;
+
+        &:before {
+          content: '';
+          width: 12px;
+          height: 12px;
+          background: #6fc173;
+          position: absolute;
+          left: 20px;
+          top: 20px;
+          border-radius: 100%;
+        }
+
+        h2 {
+          font-size: 1.6rem;
+          color: #333;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 150px;
+        }
+
+        p {
+          color: #888;
+        }
+
+        .time {
+          color: #888;
+          font-size: 1.4rem;
+        }
+
+        .price {
+          font-size: 2.0rem;
+          font-weight: bold;
+          line-height: 62px;
+          color: #666;
+        }
+      }
+    }
+  }
+}

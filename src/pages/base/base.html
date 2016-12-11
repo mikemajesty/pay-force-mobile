@@ -1,0 +1,26 @@
+<ion-menu type="overlay" [content]="content">
+  <ion-toolbar id="sideMenuHeader">
+    <div class="logo">
+    </div>
+  </ion-toolbar>
+
+  <ion-content class="base-promoter">
+    <ion-list>
+      <ion-item (click)="onSuppliersClick()" menuClose>Fornecedores
+        <ion-icon name="ios-people-outline" item-left></ion-icon>
+      </ion-item>
+      <ion-item (click)="launch('https://goo.gl/forms/PuZxztXxzZrTDpVs2')" menuClose>Enviar Feedback
+        <ion-icon name="ios-chatboxes-outline" item-left></ion-icon>
+      </ion-item>
+      <ion-item (click)="onAboutClick()" menuClose>Sobre o aplicativo
+        <ion-icon name="ios-information-circle-outline" item-left></ion-icon>
+      </ion-item>
+      <ion-item (click)="onLogoutClick()" menuClose>Sair
+        <ion-icon name="log-out" item-left></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- main navigation -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
