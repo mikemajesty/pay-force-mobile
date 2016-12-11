@@ -5,10 +5,11 @@ import 'rxjs/Rx';
 @Injectable()
 export class Data {
 
-  private baseUrl:string = "http://localhost:3000";
-  // private baseUrl:string = "https://payforce.herokuapp.com";
+  // private baseUrl:string = "http://localhost:3000";
+  private baseUrl:string = "https://payforce.herokuapp.com";
 
-  private telefone:string = '11974048080';
+  private telefone:string = '';
+  // private telefone:string = '11974048080';
 
   constructor(public http: Http) {
   }

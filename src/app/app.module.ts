@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { BasePage } from '../pages/base/base';
 import { TransactionPage } from '../pages/transaction/transaction';
+import { Data } from '../providers/data';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,9 @@ import { TransactionPage } from '../pages/transaction/transaction';
     TransactionPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      mode: 'md'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -22,6 +25,6 @@ import { TransactionPage } from '../pages/transaction/transaction';
     BasePage,
     TransactionPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Data]
 })
 export class AppModule {}

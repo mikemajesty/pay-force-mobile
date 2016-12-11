@@ -10,11 +10,10 @@ import { Data } from '../../providers/data';
 })
 export class BasePage {
 
-  private rootPage:any = TransactionPage;
-  private telefone:string;
+  public rootPage:any = TransactionPage;
+  public telefone:string;
 
   constructor(public navCtrl: NavController) {
-
   }
 
   ionViewDidLoad() {
