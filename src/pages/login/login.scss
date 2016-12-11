@@ -1,7 +1,7 @@
 page-login {
 
   font-family: 'Montserrat-Regular';
-  
+
   text-align: center;
   background-image: url('/assets/images/girl-using-phone.png');
   background-repeat: no-repeat;
@@ -31,6 +31,10 @@ page-login {
       background-color: #e72c56;
       font-weight: bold;
       font-size: 19px;
+
+      &:hover {
+        background-color: #CC0735 !important;
+      }
     }
   }
 
