@@ -13,7 +13,8 @@ export class BasePage {
   public rootPage:any = TransactionPage;
   public telefone:string;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public data:Data) {
+    this.data.setBaseNavCtrl(this.navCtrl);
   }
 
   ionViewDidLoad() {

@@ -9,11 +9,11 @@
           </button>
         </ion-col>
         <ion-col>
-          PayForce
+          <img src="assets/images/logo_test1_negativo.png"/>
         </ion-col>
         <ion-col text-right>
-          <button ion-button icon-only clear color="light">
-            <ion-icon name="settings"></ion-icon>
+          <button ion-button icon-only clear color="light" small (click)="onLogoutClick()">
+            <ion-icon name="exit"></ion-icon>
           </button>
         </ion-col>
       </ion-row>
@@ -61,19 +61,104 @@
   <span *ngIf="type === 'extrato'">
     <ion-list>
       <ion-list-header>
-        Hoje
-      </ion-list-header>
-
-      <ion-item *ngFor="let item of user.extrato">
         <ion-grid>
           <ion-row>
             <ion-col>
-              <div class="time">{{item.data | date: 'd/M/y'}}</div>
-              <h2>{{item.descricao}}</h2>
-              <p>{{item.categoria}}</p>
+              10/12/2016
             </ion-col>
             <ion-col text-right>
-              <span class="price">R$ {{item.valor.toFixed(2).replace(".", ",")}}</span>
+              <span>R$ 500,00</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-list-header>
+
+      <ion-item style="height:180px">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p>Padaria</p>
+            </ion-col>
+            <ion-col text-right>
+              <span>R$ -10,00</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p>Rodoviária</p>
+            </ion-col>
+            <ion-col text-right>
+              <span>R$ -32,00</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p>Refeição</p>
+            </ion-col>
+            <ion-col text-right>
+              <span>R$ -16,50</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p>Supermercado</p>
+            </ion-col>
+            <ion-col text-right>
+              <span> R$ -230,00</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              09/12/2016
+            </ion-col>
+            <ion-col text-right>
+              <span>R$ 788,50</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-list-header>
+
+      <ion-item style="height:180px">
+        <ion-grid>
+          <ion-row style="color:blue">
+            <ion-col>
+              <p>Recarga</p>
+            </ion-col>
+            <ion-col text-right>
+              <span>R$ 500,00</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p>Refeição</p>
+            </ion-col>
+            <ion-col text-right>
+              <span>R$ -32,00</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p>Academia</p>
+            </ion-col>
+            <ion-col text-right>
+              <span>R$ -80,00</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p>Faculdade</p>
+            </ion-col>
+            <ion-col text-right>
+              <span>R$ -230,00</span>
             </ion-col>
           </ion-row>
         </ion-grid>

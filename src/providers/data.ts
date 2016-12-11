@@ -11,11 +11,25 @@ export class Data {
   private telefone:string = '';
   // private telefone:string = '11974048080';
 
+  private baseNavCtrl:any;
+
   constructor(public http: Http) {
   }
 
   setTelefone(telefone:string) {
     this.telefone = telefone;
+  }
+
+  getTelefone() {
+    return this.telefone;
+  }
+
+  setBaseNavCtrl(baseNavCtrl) {
+    this.baseNavCtrl = baseNavCtrl;
+  }
+
+  getBaseNavCtrl() {
+    return this.baseNavCtrl;
   }
 
   getUsuario() {

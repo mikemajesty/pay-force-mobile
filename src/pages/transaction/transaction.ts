@@ -8,8 +8,9 @@ import { Data } from '../../providers/data';
 })
 export class TransactionPage {
 
-  public type:string = 'extrato';
+  public type:string = 'resumo';
   public user:any = {};
+  public telefone:string;
 
   constructor(public navCtrl: NavController, private data:Data, private loadingCtrl: LoadingController, private alertCtrl:AlertController) {}
 
@@ -66,6 +67,10 @@ export class TransactionPage {
       }
 
     });
+  }
+
+  onLogoutClick() {
+    this.data.getBaseNavCtrl().pop();
   }
 
 }

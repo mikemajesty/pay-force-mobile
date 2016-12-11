@@ -6,7 +6,7 @@ page-transaction {
 
   ion-navbar.toolbar {
 
-    height: 161px;
+    height: 153px;
 
     .toolbar-content {
       color: white!important;
@@ -17,6 +17,10 @@ page-transaction {
       background: -moz-linear-gradient(top,  #e86279 0%, #e72c56 24%);
       background: -webkit-linear-gradient(top,  #e86279 0%,#e72c56 24%);
       background: linear-gradient(to bottom,  #e86279 0%,#e72c56 24%);
+    }
+
+    img {
+      margin-top:6px;
     }
 
     .segment-md {

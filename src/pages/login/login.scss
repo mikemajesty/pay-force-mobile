@@ -1,6 +1,6 @@
 page-login {
 
-  font-family: 'Montserrat-Regular';
+  font-family: 'Montserrat-Regular'!important;
 
   background-image: url('../assets/images/bg.png');
   background-repeat: no-repeat;
@@ -41,24 +41,4 @@ page-login {
     background-color: transparent;
     color: white;
   }
-
-  // ion-footer {
-  //   padding: 15.5px;
-  //   bottom: 14rem;
-
-  //   .button-block-md {
-  //     height: 5.5rem;
-  //     background-color: #e72c56;
-  //     font-weight: bold;
-  //     font-size: 19px;
-
-  //     &:hover {
-  //       background-color: #CC0735 !important;
-  //     }
-  //   }
-  // }
-
-  // .footer-md:before {
-  //   width: 0;
-  // }
 }
