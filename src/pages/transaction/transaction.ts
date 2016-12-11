@@ -13,6 +13,8 @@ import { NavController } from 'ionic-angular';
 })
 export class TransactionPage {
 
+  private type:string = 'extrato';
+
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {

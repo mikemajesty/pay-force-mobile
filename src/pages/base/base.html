@@ -1,24 +1,37 @@
 <ion-menu type="overlay" [content]="content">
-  <ion-toolbar id="sideMenuHeader">
-    <div class="logo">
-    </div>
-  </ion-toolbar>
-
   <ion-content class="base-promoter">
+
     <ion-list>
-      <ion-item (click)="onSuppliersClick()" menuClose>Fornecedores
-        <ion-icon name="ios-people-outline" item-left></ion-icon>
+      <ion-item>
+          <div class="front">
+            <div class="logo">
+              <img src="/assets/visa.png"/>
+            </div>
+            <div class="number">**** **** **** 4164</div>
+            <div class="card-expiration-date">
+              <label>Expires</label>
+              <div>08/19</div>
+            </div>
+          </div>
       </ion-item>
-      <ion-item (click)="launch('https://goo.gl/forms/PuZxztXxzZrTDpVs2')" menuClose>Enviar Feedback
-        <ion-icon name="ios-chatboxes-outline" item-left></ion-icon>
-      </ion-item>
-      <ion-item (click)="onAboutClick()" menuClose>Sobre o aplicativo
-        <ion-icon name="ios-information-circle-outline" item-left></ion-icon>
-      </ion-item>
-      <ion-item (click)="onLogoutClick()" menuClose>Sair
-        <ion-icon name="log-out" item-left></ion-icon>
+      <ion-item>
+          <div class="front">
+            <div class="logo">
+              <img src="/assets/mastercard.png"/>
+            </div>
+            <div class="number">**** **** **** 3715</div>
+            <div class="card-expiration-date">
+              <label>Expires</label>
+              <div>09/18</div>
+            </div>
+          </div>
       </ion-item>
     </ion-list>
+
+    <ion-fab center bottom>
+      <button ion-fab color="light"><ion-icon name="md-add"></ion-icon></button>
+    </ion-fab>
+
   </ion-content>
 </ion-menu>
 

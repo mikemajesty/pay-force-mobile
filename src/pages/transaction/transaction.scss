@@ -1,5 +1,47 @@
 page-transaction {
 
+  .content-md {
+    background: #fff;
+  }
+
+  ion-navbar.toolbar {
+
+    height: 161px;
+
+    .toolbar-content {
+      color: white!important;
+    }
+
+    .toolbar-background {
+      background: #e86279;
+      background: -moz-linear-gradient(top,  #e86279 0%, #e72c56 24%);
+      background: -webkit-linear-gradient(top,  #e86279 0%,#e72c56 24%);
+      background: linear-gradient(to bottom,  #e86279 0%,#e72c56 24%);
+    }
+
+    .segment-md {
+      .segment-button {
+        color: white;
+        border-color: white;
+      }
+
+      .segment-button.activated {
+        color: white;
+        border-color: white;
+      }
+    }
+
+    .saldo {
+      label {
+        font-size: 12px;
+      }
+
+      div {
+        font-size: 22px;
+      }
+    }
+  }
+
   ion-list.list {
 
     ion-list-header {
@@ -7,7 +49,9 @@ page-transaction {
     }
 
     ion-item.item-block {
+      background-color: #fff;
       padding-left: 25px;
+      height: 94px;
 
       div.item-inner {
         border-bottom: none;
@@ -22,18 +66,20 @@ page-transaction {
 
         &:before {
           content: '';
-          width: 12px;
-          height: 12px;
-          background: #6fc173;
+          width: 10px;
+          height: 10px;
+          // background: #6fc173;
+          background: white;
           position: absolute;
           left: 20px;
           top: 20px;
           border-radius: 100%;
+          border: 1px solid #E72C56;
         }
 
         h2 {
           font-size: 1.6rem;
-          color: #333;
+          color: #888;
           overflow: hidden;
           text-overflow: ellipsis;
           max-width: 150px;
@@ -50,7 +96,7 @@ page-transaction {
 
         .price {
           font-size: 2.0rem;
-          font-weight: bold;
+          // font-weight: bold;
           line-height: 62px;
           color: #666;
         }
