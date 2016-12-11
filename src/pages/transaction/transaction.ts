@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
 import { AlertController, LoadingController, NavController } from 'ionic-angular';
 import { Data } from '../../providers/data';
-import { Currency } from '../../pipes/currency';
 
 @Component({
   selector: 'page-transaction',
   templateUrl: 'transaction.html',
-  providers: [Data, Currency]
 })
 export class TransactionPage {
 
-  private type:string = 'extrato';
-  private user:any = {};
+  public type:string = 'extrato';
+  public user:any = {};
 
   constructor(public navCtrl: NavController, private data:Data, private loadingCtrl: LoadingController, private alertCtrl:AlertController) {}
 

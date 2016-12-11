@@ -25,18 +25,18 @@
       </ion-row>
     </ion-grid>
     <ion-segment [(ngModel)]="type">
-      <ion-segment-button value="extrato">
-        Extrato
-      </ion-segment-button>
       <ion-segment-button value="resumo">
         Resumo
+      </ion-segment-button>
+      <ion-segment-button value="extrato">
+        Extrato
       </ion-segment-button>
     </ion-segment>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <span *ngIf="type === 'extrato'">
+  <span *ngIf="type === 'resumo'">
     <ion-list>
       <ion-list-header>
         Hoje
@@ -47,6 +47,28 @@
           <ion-row>
             <ion-col>
               <div class="time">{{item.data | date: 'H:m'}}</div>
+              <h2>{{item.descricao}}</h2>
+              <p>{{item.categoria}}</p>
+            </ion-col>
+            <ion-col text-right>
+              <span class="price">R$ {{item.valor.toFixed(2).replace(".", ",")}}</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+  </span>
+  <span *ngIf="type === 'extrato'">
+    <ion-list>
+      <ion-list-header>
+        Hoje
+      </ion-list-header>
+
+      <ion-item *ngFor="let item of user.extrato">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="time">{{item.data | date: 'd/M/y'}}</div>
               <h2>{{item.descricao}}</h2>
               <p>{{item.categoria}}</p>
             </ion-col>
