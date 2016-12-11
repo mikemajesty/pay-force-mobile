@@ -3,36 +3,36 @@ import { Component } from '@angular/core';
 import { AlertController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-payment',
+  templateUrl: 'payment.html'
 })
-export class AboutPage {
+export class PaymentPage {
 
   constructor(public alertCtrl: AlertController) { }
 
   openPopup() {
     let popup = this.alertCtrl.create({
-      title: "Test",
-      message: "Message test",
+      title: 'Test',
+      message: 'Test message',
       inputs: [
         {
-          name: "codigo",
-          placeholder: "Digite seu código"
+          name: 'code',
+          placeholder: 'Your code...'
         }
       ],
       buttons: [
         {
-          text: "Cancel"
+          text: 'Cancel'
         },
         {
-          text: "Salvar",
+          text: 'Save',
           handler: data => {
-            console.log('fooi');
+            console.log("Save Ok");
           }
         }
       ]
     });
-    
+
     popup.present();
   }
 }
