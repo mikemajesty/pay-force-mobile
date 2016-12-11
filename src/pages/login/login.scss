@@ -1,3 +1,40 @@
 page-login {
 
+  font-family: 'Montserrat-Regular';
+  
+  text-align: center;
+  background-image: url('/assets/images/girl-using-phone.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1 {
+    margin-top: 16rem !important;
+    margin-bottom: 6rem !important;
+  }
+
+   .content-md {
+     background: rgba(255,255,255, 0.2);
+     background: rgba(0,0,0, 0.3);
+     background: rgba(255,0,0, 0.1);
+   }
+
+  .item-md {
+    margin-top: 10px;
+  }
+
+  ion-footer {
+    padding: 15.5px;
+    bottom: 14rem;
+
+    .button-block-md {
+      height: 5.5rem;
+      background-color: #e72c56;
+      font-weight: bold;
+      font-size: 19px;
+    }
+  }
+
+  .footer-md:before {
+    width: 0;
+  }
 }

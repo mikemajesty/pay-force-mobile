@@ -1,3 +1,20 @@
 <ion-content padding>
-  <button ion-button (click)="onLoginClick()">Login</button>
+
+  <h1>Pay Force</h1>
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+<ion-footer>
+  <button ion-button block (click)="onLoginClick()">Login</button>
+</ion-footer>
