@@ -4,13 +4,14 @@ import { BasePage } from '../base/base';
 
 @Component({
   selector: 'page-login',
-  templateUrl: 'login.html'
+  templateUrl: 'login.html',
 })
 export class LoginPage {
 
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
+
   }
 
   onLoginClick() {

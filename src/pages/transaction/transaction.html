@@ -20,7 +20,7 @@
       <ion-row>
         <ion-col class="saldo" text-center>
           <label>Saldo</label>
-          <div>R$ 100,00</div>
+          <div>R$ {{user.valor}}</div>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -42,127 +42,16 @@
         Hoje
       </ion-list-header>
 
-      <ion-item>
+      <ion-item *ngFor="let item of user.movimentos">
         <ion-grid>
           <ion-row>
             <ion-col>
-              <div class="time">11:00</div>
-              <h2>Pizzaria do Italiano verdadeiro</h2>
-              <p>Restaurante</p>
+              <div class="time">{{item.data | date: 'H:m'}}</div>
+              <h2>{{item.descricao}}</h2>
+              <p>{{item.categoria}}</p>
             </ion-col>
             <ion-col text-right>
-              <span class="price">R$ 12,00</span>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-
-      <ion-item>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div class="time">11:00</div>
-              <h2>Pizza do Italiano</h2>
-              <p>Restaurante</p>
-            </ion-col>
-            <ion-col text-right>
-              <span class="price">R$ 12,00</span>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-
-      <ion-item>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div class="time">11:00</div>
-              <h2>Pizza do Italiano</h2>
-              <p>Restaurante</p>
-            </ion-col>
-            <ion-col text-right>
-              <span class="price">R$ 12,00</span>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-
-      <ion-item>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div class="time">11:00</div>
-              <h2>Pizza do Italiano</h2>
-              <p>Restaurante</p>
-            </ion-col>
-            <ion-col text-right>
-              <span class="price">R$ 12,00</span>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-    </ion-list>
-
-    <ion-list>
-      <ion-list-header>
-        Ontem
-      </ion-list-header>
-
-      <ion-item>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div class="time">11:00</div>
-              <h2>Pizzaria do Italiano verdadeiro</h2>
-              <p>Restaurante</p>
-            </ion-col>
-            <ion-col text-right>
-              <span class="price">R$ 12,00</span>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-
-      <ion-item>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div class="time">11:00</div>
-              <h2>Pizza do Italiano</h2>
-              <p>Restaurante</p>
-            </ion-col>
-            <ion-col text-right>
-              <span class="price">R$ 12,00</span>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-
-      <ion-item>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div class="time">11:00</div>
-              <h2>Pizza do Italiano</h2>
-              <p>Restaurante</p>
-            </ion-col>
-            <ion-col text-right>
-              <span class="price">R$ 12,00</span>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-
-      <ion-item>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div class="time">11:00</div>
-              <h2>Pizza do Italiano</h2>
-              <p>Restaurante</p>
-            </ion-col>
-            <ion-col text-right>
-              <span class="price">R$ 12,00</span>
+              <span class="price">R$ {{item.valor.toFixed(2).replace(".", ",")}}</span>
             </ion-col>
           </ion-row>
         </ion-grid>

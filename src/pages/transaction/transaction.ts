@@ -1,24 +1,73 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { AlertController, LoadingController, NavController } from 'ionic-angular';
+import { Data } from '../../providers/data';
+import { Currency } from '../../pipes/currency';
 
-/*
-  Generated class for the Transaction page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-transaction',
-  templateUrl: 'transaction.html'
+  templateUrl: 'transaction.html',
+  providers: [Data, Currency]
 })
 export class TransactionPage {
 
   private type:string = 'extrato';
+  private user:any = {};
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, private data:Data, private loadingCtrl: LoadingController, private alertCtrl:AlertController) {}
 
   ionViewDidLoad() {
-    console.log('Hello TransactionPage Page');
+    this.loadData();
+  }
+
+  loadData() {
+    let loading = this.loadingCtrl.create({
+      content: 'Buscando dados...',
+      spinner: 'crescent',
+    });
+
+    loading.present();
+
+    this.data.getUsuario().then((data) => {
+      this.user = data;
+
+      loading.dismiss();
+
+      setTimeout(this.pollingTransacao(), 10000);
+    });
+  }
+
+  pollingTransacao() {
+    this.data.getTransacaoPendente().then((data) => {
+      if (data) {
+          let confirm = this.alertCtrl.create({
+          title: 'Compra',
+          message: 'Você confirma a compra de R$ ' + data.valor + ' ?',
+          buttons: [
+            {
+              text: 'Recusar',
+              handler: () => {
+                this.data.recusarTransacao(data._id).then(() => {
+                  setTimeout(this.pollingTransacao(), 10000);
+                });
+              }
+            },
+            {
+              text: 'Confirmar',
+              handler: () => {
+                this.data.confirmarTransacao(data._id).then(() => {
+                  this.loadData();
+                });
+              }
+            }
+          ]
+        });
+
+        confirm.present();
+      } else {
+        setTimeout(this.pollingTransacao(), 4000);
+      }
+
+    });
   }
 
 }
